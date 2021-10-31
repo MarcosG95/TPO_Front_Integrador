@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de contacto por email</title>
     <link rel="stylesheet" href="hojaEstilos.css">
+    <link rel="icon" href="img/ghost.png">
+    <script src="validacionFormulario.js"></script>
 </head>
 <body>
     <header>
@@ -19,25 +21,30 @@
     </header>
     <section>
         <div>
-            <h1>¿Querés recibir más recomendaciones? Consultanos</h1>
-            <form>
+            <h1>Consultanos para más información</h1>
+            <form action="https://formspree.io/f/mwkadvkp" method="post" target="_blank" onsubmit="return validacionFormulario()">
                 <h2>Complete sus datos:</h2>
-                <label for="firstname">Nombre: </label> <input type="text" name="firstname" id="firstname"
-                    placeholder="Ingrese su nombre aqui..." required>
+                <label for="nombre">Nombre: </label> <input type="text" name="nombre" id="nombre"
+                    placeholder="Ingrese su nombre">
                     <span>*</span>
                 <br><br>
-                <label for="lastname">Apellido:</label> <input type="text" name="lastname" id="lastname"
-                    placeholder="Ingrese su apellido aqui..." required>
+                <label for="nombre">Apellido:</label> <input type="text" name="apellido" id="apellido"
+                    placeholder="Ingrese su apellido">
                     <span>*</span>
                 <br><br>
                 <label for="telefono">Telefono:</label> <input type="tel" name="telefono" id="telefono"
-                    placeholder="ingrese su telefono aqui ....">
+                    placeholder="11XXXXXXXX">
                 <br><br>
-                <label for="mail">Mail: </label> <input type="email" name="mail" id="mail"
-                    placeholder="ingrese su mail aqui ...." required>
+                <label for="mail">E-Mail: </label> <input type="email" name="mail" id="mail"
+                    placeholder="ejemplo@sucorreo.com">
                     <span>*</span>
                 <br><br>
+                <label for="consultas">Consultas:<textarea id="consultas" class="" name="consultas" cols="20" rows="10" placeholder="Escriba su consulta" ></textarea></label>
+                <span>*</span>
+                <br><br>
                 <span>* Campos obligatorios</span>
+                <br><br>
+                <p id="ErrorViewer"></p>
                 <div>
                     <input type="submit" value="Enviar">
                     <input type="reset" value="Borrar datos">
@@ -47,7 +54,7 @@
         <br>
     </section>
     <footer>
-        <p>Derechos reservados @2020</p>
+        <p>Dereos reservados @2020</p>
     </footer>
 </body>
 </html>
