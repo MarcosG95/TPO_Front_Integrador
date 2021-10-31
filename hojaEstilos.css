@@ -23,12 +23,13 @@ header{
         display:flex;
         float:left;
         }
+          
 
     
     .flex-container{
         width: 100vw;
-        height:25vh;
-        background-color: gray;
+        height:70px;
+        background-color: black;
         display: flex; /*Le hereda a los hijos la posibilidad de ser FLEX*/
        
         flex-direction: row;/*EJE PRINCIPAL!!!*/
@@ -53,20 +54,9 @@ header{
         background-color: rgb(17, 17, 17);
         width: 15%;
         height:15%;
-        
+        float:right;
     
-    }
-    
-    
-    
-    .flex-item2{
-        background-color: rgb(235, 208, 55);
-        width: 15%;
-        height:15%;
-    
-        /*align-self: center;/*self , alinea a si mismo*/
-        /*OPCIONES:center, flex-start o flex-end*/
-    }   
+    } 
 
     ul{
         list-style-type: none;/*sacamos puntitos*/
@@ -84,4 +74,9 @@ header{
         text-transform: uppercase;
         font-size: .9em;
     }
+
+    ul li a:hover{
+            background-color: rgb(83, 32, 83); 
+    }
+
     
