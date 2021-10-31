@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de contacto por email</title>
-    <link rel="stylesheet" href="hojaEstilos.css">
+    <link rel="stylesheet" href="estiloaux.css">
     <link rel="icon" href="img/ghost.png">
     <script src="validacionFormulario.js"></script>
+    <script src="https://kit.fontawesome.com/0199facc0c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -21,10 +22,10 @@
     </header>
     <section>
         <div>
-            <h1>Consultanos para más información</h1>
+           <h1 id="tituloFormulario"><i class="far fa-envelope"></i> consultanos para mas informacion</h1>
             <form action="https://formspree.io/f/mwkadvkp" method="post" target="_blank" onsubmit="return validacionFormulario()">
-                <h2>Complete sus datos:</h2>
-                <label for="nombre">Nombre: </label> <input type="text" name="nombre" id="nombre"
+                <div>
+                    <label for="nombre">Nombre: </label> <input type="text" name="nombre" id="nombre"
                     placeholder="Ingrese su nombre">
                     <span>*</span>
                 <br><br>
@@ -39,15 +40,16 @@
                     placeholder="ejemplo@sucorreo.com">
                     <span>*</span>
                 <br><br>
-                <label for="consultas">Consultas:<textarea id="consultas" class="" name="consultas" cols="20" rows="10" placeholder="Escriba su consulta" ></textarea></label>
+                <textarea id="consultas" class="" name="consultas" cols="30" rows="10" placeholder="Escriba su consulta" ></textarea>
                 <span>*</span>
                 <br><br>
                 <span>* Campos obligatorios</span>
                 <br><br>
                 <p id="ErrorViewer"></p>
                 <div>
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Borrar datos">
+                    <input class="botonEnviar" type="submit" value="Enviar">
+                    <input class="botonReset" type="reset" value="Borrar datos">
+                </div>
                 </div>
             </form>
         </div>
@@ -58,3 +60,4 @@
     </footer>
 </body>
 </html>
+
