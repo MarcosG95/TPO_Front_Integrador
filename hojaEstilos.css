@@ -1,82 +1,208 @@
-/*
-header{
-    width: 960px;
-    height: 70px;
+body{
     background-color: black;
+}
+header{
+    width: 100%;
+    height: 90px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #1D1716;
+}
+
+#logo{
+    width: 190px;
+    height: 70px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#botonera{
+    float: right;
+    width: 850px;
+    height: 60px;
+    margin-top: 20px;
+}         
+
+#botonera ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+
+#botonera ul li{
+    display: inline;
+}
+
+#botonera ul li a{
+    display: inline-block;
+    color: #FFE459;
+    font-family: "The Conjuring";
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#botonera ul li a:hover{
+    background-color: rgb(83, 32, 83); 
+    transition-duration: .2s;
+}
+
+ @font-face {
+    font-family: "The Conjuring";
+    src: url("fonts/TrajanusBricks.ttf");
+}
+
+#bodyFormulario{
+    color:whitesmoke;
+}
+
+form{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(134, 72, 121) 0px 0px 0px 3px;
+    width: 500px;
+    padding: 1em 2em 2em 2em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.botonEnviar {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 2rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.botonEnviar:hover {
+  box-shadow: rgba(255, 255, 255, 0.938) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+.botonReset {
+    background-image: linear-gradient(92.88deg, #4579b5 9.16%, #438ecc 43.89%, #3fc5d7 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .botonReset:hover {
+    box-shadow: rgba(255, 255, 255, 0.938) 0 1px 30px;
+    transition-duration: .1s;
+  }
+
+  #tituloFormulario{
+      color: #FFE459;
+      font-family: "The Conjuring";
+      text-align: center;
+  }
+
+textarea{
+    resize: none;
+}
+
+
+@media all and (min-width:600px) and (max-width:1023px){
+
+    header{
+        width: 580px;
+        height: 230px;
+        background-color: #1D1716;
     }
 
-    
-    
-#botones{
-    width: 400px;
+    #logo{
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+
+    #botonera{
+        float: none;
+        width: 400px;
         height: 40px;
-    /*   background-color: #292e5c; Se lo saco
-    float: right;     Si no metiera esto quedaria abajo
         margin-top: 20px;
-    } */
-    #logo {
-        width: 190px;
-        height: 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }  
+
+}
+
+@media all and (max-width:599px){
+
+    header{
+        width: 90%;
+        height: auto;
+        background-color: #1D1716;
+    }
+
+    #logo{
+        width: 100%;
+        height: auto;
         border-radius: 50%;
-        display:flex;
-        float:left;
-        }
-          
-
-    
-    .flex-container{
-        width: 100vw;
-        height:70px;
-        background-color: black;
-        display: flex; /*Le hereda a los hijos la posibilidad de ser FLEX*/
-       
-        flex-direction: row;/*EJE PRINCIPAL!!!*/
-        /*Es el orden de los ejes, por defecto es row
-        o sea el eje principal es la fila , el secundario la columna */
-        /* oPCIONES: flex-direction: column; o row-reverse o column-reverse*/
-    
-        justify-content:space-around;/*alinea los elementos del eje principal*/
-        /*Los puedo poner en el medio  , o mas separados , etc...ver el ejemplo este
-        con todos los elementos en el mismo eje para mas claridad.*/
-        /*start, end , center, space-arround space-between*/
-    
-        align-items:flex-start  ;/*EJE SECUNDARIO(El que no elegimos en Flex-direction)
-        /*alinea con respecto al eje secundario 
-        opciones:Flex-sTART O flex-end  o CENTER!!!!*/
-        
-        
-    
-       
-    }
-    .flex-item{
-        background-color: rgb(17, 17, 17);
-        width: 15%;
-        height:15%;
-        float:right;
-    
-    } 
-
-    ul{
-        list-style-type: none;/*sacamos puntitos*/
-        display: flex;
-        align-self: flex-start;/*los ubicamos arriba*/
-    }
-     
-    ul li{
-        margin: 0.5em;/*Los separamos un poquito*/
-    }
-    
-    a{
-        text-decoration:none ; /*sacamos subrayado*/
-        color: white;
-        text-transform: uppercase;
-        font-size: .9em;
+        float:none;
+        padding: 10px;
+        margin-top: auto;
+        margin-left: auto;
+        box-sizing: border-box;
+        text-align: center;
     }
 
-    ul li a:hover{
-            background-color: rgb(83, 32, 83); 
+    nav{
+        width: auto;
+        height: auto;
     }
 
-    
+    #botonera{
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }  
+
+    #botonera ul{
+        float: none;
+    }
+
+    #botonera ul li{
+        display: block;
+    }
+
+    #botonera ul li a{
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+
+
+}
