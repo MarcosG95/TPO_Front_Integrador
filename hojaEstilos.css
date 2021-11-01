@@ -1,6 +1,13 @@
 body{
     background-color: black;
 }
+
+#bodyHome{
+    background-image: url("img/elconjuro_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 header{
     width: 100%;
     height: 90px;
@@ -50,9 +57,72 @@ header{
     transition-duration: .2s;
 }
 
+#contenidoMenu{
+    width: 90%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contenidoMenu ul{
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contenidoMenu ul li{
+    display: inline;
+}
+
+#contenidoMenu ul li img{
+    display: inline-block;
+    width: 500px;
+    padding: 20px;
+    background-position: center;
+}
+#contenidoMenu ul li img:hover{
+    background-color: rgb(83, 32, 83); 
+    transition-duration: .2s;
+    opacity: 0.5;
+}
+
+#tituloHome{
+    color: black;
+    font-family: "The Conjuring";
+    font-size: 32px;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+#footer1{
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0%;
+    width: 99%;
+    color: white;
+    text-align: right;
+    font-family: "Simonetta";
+}
+
+#footer2{
+    background-color: black;
+    position: relative;
+    bottom: 0%;
+    width: 99%;
+    color: white;
+    text-align: right;
+    font-family: "Simonetta";
+}
+
  @font-face {
     font-family: "The Conjuring";
     src: url("fonts/TrajanusBricks.ttf");
+}
+
+@font-face {
+    font-family: "Simonetta";
+    src: url("fonts/Simonetta-Regular.ttf");
 }
 
 #bodyFormulario{
@@ -131,6 +201,60 @@ textarea{
     resize: none;
 }
 
+#complemento{
+    float: right;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    border-radius: 3%;
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 10px;
+    background-color: #1D1716;
+    position:sticky;
+    top: 120px;
+}
+
+#poster{
+    width: 200px;
+    height: auto;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#tituloPelicula{
+    font-family: "The Conjuring";
+    color: #FFE459;
+    font-size: 32px;
+    text-transform: lowercase;
+}
+
+#tituloFicha{
+    font-family: "The Conjuring";
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: lowercase;
+    color: #FFE459;
+    text-align: center;
+}
+
+.imagen{
+    width: 700px;
+    height: auto;
+}
+
+.ficha{
+    color: white;
+    font-family: "Simonetta";
+}
+
+.resumen{
+    width: 70%;
+    color: white;
+    font-size: 25px;
+    font-family: "Simonetta";
+}
 
 @media all and (min-width:600px) and (max-width:1023px){
 
@@ -155,6 +279,40 @@ textarea{
         margin-right: auto;
     }  
 
+    #contenidoMenu{
+        width: 500px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #contenidoMenu ul{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    #contenidoMenu ul li{
+        display: block;
+    }
+    
+    #contenidoMenu ul li img{
+        width: 400px;
+        background-position: center
+    }
+
+    #tituloHome{
+        color: white;
+    }
+
+    #bodyHome{
+        background-image: none;
+    }
+
+    #footer1{
+        position: relative;
+        opacity: 1;
+    }
 }
 
 @media all and (max-width:599px){
@@ -203,6 +361,36 @@ textarea{
         text-align: center;
     }
 
+    #contenidoMenu{
+        width: 90%;
+        height: auto;
+        margin-top: 20px;
+    }
 
+    #contenidoMenu ul{
+        width: 90%;
+    }
+
+    #contenidoMenu ul li{
+        display: block;
+    }
+
+    #contenidoMenu ul li img{
+        width: 80%;
+        background-position: center
+    }
+
+    #tituloHome{
+        color: white;
+    }
+
+    #bodyHome{
+        background-image: none;
+    }
+
+    #footer1{
+        position: relative;
+        opacity: 1;
+    }
 
 }
